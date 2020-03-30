@@ -36,7 +36,7 @@ woman(isabelle).
 woman(daphne).
 woman(vanessa).
 
-sibling(X,Y):-parent(Z,X),parent(Z,Y).
+sibling(X,Y):-parent(Z,X),parent(Z,Y),not(X = Y).
 cousin(X,Y):-parent(P,X),parent(Q,Y),sibling(P,Q),not(P = Q).
 male_cousin(X,Y):-man(X),cousin(X,Y).
 
