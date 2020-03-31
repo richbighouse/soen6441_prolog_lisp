@@ -6,7 +6,11 @@
 		((> 0 num) nil)
 		((not (every 'integerp lst)) nil)
 		(t
-			lst
+			(if (> (car lst) num)
+				(cons (car lst) (filter (cdr lst) num))
+				(filter (cdr lst) num)
+			)
 		)
 	)
 )
+ 
