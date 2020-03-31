@@ -1,0 +1,12 @@
+(defun filter (lst num)
+	(cond
+		((null lst) nil)
+		((not (listp lst)) nil)
+		((not (numberp num)) nil)
+		((> 0 num) nil)
+		((not (every 'integerp lst)) nil)
+		(t
+			lst
+		)
+	)
+)
