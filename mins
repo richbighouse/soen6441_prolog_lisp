@@ -2,7 +2,8 @@
 	(cond
 		((or (null lst1) (null lst2) (null lst3)) nil)
 		((or (atom lst1) (atom lst2) (atom lst3)) nil)
-		((/= (list-length lst1) (list-length lst2) (list-length lst3)) nil)
+		((/= (list-length lst1) (list-length lst2)) nil)
+                ((/= (list-length lst1) (list-length lst3)) nil)
 		(t
 			(let 
 				(
